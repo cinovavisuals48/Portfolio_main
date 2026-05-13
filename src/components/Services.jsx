@@ -73,9 +73,9 @@ const ToolIcon = ({ type }) => {
     case 'framer':
       return (
         <svg width="20" height="28" viewBox="0 0 14 21" fill="none">
-          <path d="M0 14H7V21L0 14Z" fill="#000"/>
-          <path d="M0 7H7L14 14H0V7Z" fill="#000"/>
-          <path d="M0 0H14L7 7H0V0Z" fill="#000"/>
+          <path d="M0 14H7V21L0 14Z" fill="#fff"/>
+          <path d="M0 7H7L14 14H0V7Z" fill="#fff"/>
+          <path d="M0 0H14L7 7H0V0Z" fill="#fff"/>
         </svg>
       )
     case 'lottie':
@@ -87,8 +87,8 @@ const ToolIcon = ({ type }) => {
     case 'notion':
       return (
         <svg width="22" height="22" viewBox="0 0 100 100" fill="none">
-          <path d="M6.017 4.313l55.333-4.087c6.797-.583 8.543-.19 12.817 2.917l17.663 12.443c2.913 2.14 3.883 2.723 3.883 5.053v68.243c0 4.277-1.553 6.807-6.99 7.193L24.467 99.967c-4.08.193-6.023-.39-8.16-3.113L3.3 79.94c-2.333-3.113-3.3-5.443-3.3-8.167V11.113c0-3.497 1.553-6.413 6.017-6.8z" fill="#fff"/>
-          <path fillRule="evenodd" clipRule="evenodd" d="M61.35.227l-55.333 4.087C1.553 4.7 0 7.617 0 11.113v60.66c0 2.723.967 5.053 3.3 8.167l13.007 16.913c2.137 2.723 4.08 3.307 8.16 3.113l64.257-3.89c5.433-.387 6.99-2.917 6.99-7.193V20.64c0-2.21-.873-2.847-3.443-4.733L75.1 3.473l-.08-.057c-4.053-2.94-5.883-3.397-12.343-2.83L61.35.227zM25.663 19.77c-5.247.353-6.437.433-9.417-1.99L8.927 11.78c-.77-.78-.383-1.753 1.557-1.947l53.193-3.887c4.467-.39 6.793 1.167 8.54 2.527l9.123 6.61c.39.197.97 1.36 0 1.36l-54.87 3.327h-.807zm-3.39 74.027V29.593c0-2.723.77-4.083 3.887-4.28l61.293-3.5c2.917-.193 4.28 1.363 4.28 4.08v63.817c0 2.723-.58 5.053-5.053 5.247l-58.377 3.5c-4.467.193-6.03-1.17-6.03-4.66zm57.6-62.457c.387 1.75 0 3.5-1.75 3.697l-2.723.58v47.043c-2.333 1.167-4.467 1.943-6.22 1.943-2.917 0-3.693-.97-5.833-3.5L42.05 47.42v32.087l5.83 1.363s0 3.5-4.857 3.5l-13.397.78c-.387-.777 0-2.723 1.357-3.11l3.5-.97V37.59l-4.857-.39c-.387-1.75.58-4.277 3.3-4.47l14.363-.967 22.283 34.03V36.04l-4.857-.58c-.39-2.14 1.167-3.697 3.11-3.89l13.787-.83z" fill="#000"/>
+          <path d="M6.017 4.313l55.333-4.087c6.797-.583 8.543-.19 12.817 2.917l17.663 12.443c2.913 2.14 3.883 2.723 3.883 5.053v68.243c0 4.277-1.553 6.807-6.99 7.193L24.467 99.967c-4.08.193-6.023-.39-8.16-3.113L3.3 79.94c-2.333-3.113-3.3-5.443-3.3-8.167V11.113c0-3.497 1.553-6.413 6.017-6.8z" fill="#1a1a1a"/>
+          <path fillRule="evenodd" clipRule="evenodd" d="M61.35.227l-55.333 4.087C1.553 4.7 0 7.617 0 11.113v60.66c0 2.723.967 5.053 3.3 8.167l13.007 16.913c2.137 2.723 4.08 3.307 8.16 3.113l64.257-3.89c5.433-.387 6.99-2.917 6.99-7.193V20.64c0-2.21-.873-2.847-3.443-4.733L75.1 3.473l-.08-.057c-4.053-2.94-5.883-3.397-12.343-2.83L61.35.227zM25.663 19.77c-5.247.353-6.437.433-9.417-1.99L8.927 11.78c-.77-.78-.383-1.753 1.557-1.947l53.193-3.887c4.467-.39 6.793 1.167 8.54 2.527l9.123 6.61c.39.197.97 1.36 0 1.36l-54.87 3.327h-.807zm-3.39 74.027V29.593c0-2.723.77-4.083 3.887-4.28l61.293-3.5c2.917-.193 4.28 1.363 4.28 4.08v63.817c0 2.723-.58 5.053-5.053 5.247l-58.377 3.5c-4.467.193-6.03-1.17-6.03-4.66zm57.6-62.457c.387 1.75 0 3.5-1.75 3.697l-2.723.58v47.043c-2.333 1.167-4.467 1.943-6.22 1.943-2.917 0-3.693-.97-5.833-3.5L42.05 47.42v32.087l5.83 1.363s0 3.5-4.857 3.5l-13.397.78c-.387-.777 0-2.723 1.357-3.11l3.5-.97V37.59l-4.857-.39c-.387-1.75.58-4.277 3.3-4.47l14.363-.967 22.283 34.03V36.04l-4.857-.58c-.39-2.14 1.167-3.697 3.11-3.89l13.787-.83z" fill="#fff"/>
         </svg>
       )
     default:
@@ -98,7 +98,7 @@ const ToolIcon = ({ type }) => {
 
 export default function Services() {
   return (
-    <section id="services" className="section-py relative overflow-hidden bg-[#f5f5f5]">
+    <section id="services" className="section-py relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           
@@ -112,16 +112,16 @@ export default function Services() {
           >
             {/* Main Headline */}
             <h2 className="font-display font-800 text-[clamp(2.2rem,5vw,3.8rem)] leading-[1.05] tracking-tight mb-16">
-              <span className="text-neutral-400">Specialized in</span>
+              <span className="text-ink-muted">Specialized in</span>
               <br />
-              <span className="text-neutral-900">digital product</span>
+              <span className="text-ink-primary">digital product</span>
               <br />
-              <span className="text-neutral-900">motion.</span>
+              <span className="text-ink-primary">motion.</span>
             </h2>
 
             {/* Tech Stack */}
             <div>
-              <p className="text-neutral-900 font-display font-600 text-[0.95rem] mb-5">
+              <p className="text-ink-primary font-display font-600 text-[0.95rem] mb-5">
                 My tech stack
               </p>
               <div className="flex flex-wrap gap-3">
@@ -132,9 +132,9 @@ export default function Services() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: i * 0.05 }}
-                    className="w-14 h-14 rounded-xl border border-neutral-200 bg-white
+                    className="w-14 h-14 rounded-xl border border-white/10 bg-white/5
                                flex items-center justify-center
-                               hover:border-neutral-300 transition-colors"
+                               hover:border-white/20 transition-colors"
                     title={tool.name}
                   >
                     {tool.abbr ? (
@@ -175,11 +175,11 @@ export default function Services() {
                 className="flex items-center gap-5"
               >
                 {/* Icon Circle */}
-                <div className="w-14 h-14 rounded-full bg-neutral-900 flex items-center justify-center flex-shrink-0 text-white">
+                <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center flex-shrink-0 text-neutral-900">
                   {service.icon}
                 </div>
                 {/* Label */}
-                <span className="font-display font-700 text-[1.15rem] text-neutral-900">
+                <span className="font-display font-700 text-[1.15rem] text-ink-primary">
                   {service.label}
                 </span>
               </motion.div>

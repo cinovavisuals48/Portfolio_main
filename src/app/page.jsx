@@ -40,11 +40,11 @@ export default function Home() {
       {/* Projects — the main showcase */}
       <Projects />
 
-      {/* Services */}
-      <Services />
-
       {/* About */}
       <About />
+
+      {/* Services */}
+      <Services />
 
       {/* Contact */}
       <Contact />

@@ -13,7 +13,6 @@ import Image from 'next/image'
 const navLinks = [
   { label: 'Work',     href: '/#projects' },
   { label: 'Services', href: '/#services' },
-  { label: 'About',    href: '/#about'    },
 ]
 
 // Typing dots animation component (looping)

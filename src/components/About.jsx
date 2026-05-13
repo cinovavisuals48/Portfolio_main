@@ -6,7 +6,6 @@
 // ─────────────────────────────────────────────────────────────
 
 import { motion } from 'framer-motion'
-import { links } from '../data/links'
 
 export default function About() {
   return (
@@ -62,14 +61,6 @@ export default function About() {
               </p>
             </div>
 
-            <a
-              href={links.bookCall}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-ghost self-start"
-            >
-              Book a Discovery Call
-            </a>
           </motion.div>
         </div>
 
