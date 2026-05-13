@@ -8,23 +8,6 @@
 import { motion } from 'framer-motion'
 import { links } from '../data/links'
 
-const capabilities = [
-  'SaaS Explainer Videos',
-  'Product Launch Videos',
-  'UI Animation & Micro-interactions',
-  'Motion System Design',
-  'After Effects / Premiere Pro',
-  'Lottie & Web Animation',
-]
-
-const tools = [
-  'After Effects',
-  'Premiere Pro',
-  'Figma',
-  'Framer',
-  'Lottie',
-]
-
 export default function About() {
   return (
     <section id="about" className="section-py relative overflow-hidden">
@@ -41,7 +24,7 @@ export default function About() {
         </motion.p>
 
         {/* Headline + Bio */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
 
           {/* Left — Headline */}
           <motion.div
@@ -90,55 +73,6 @@ export default function About() {
           </motion.div>
         </div>
 
-        {/* Capabilities + Tools */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-
-          {/* Capabilities */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="p-6 rounded-xl border border-thin bg-bg-card"
-          >
-            <h3 className="font-display font-700 text-[0.95rem] text-ink-primary mb-4">
-              What I Do
-            </h3>
-            <ul className="space-y-2.5">
-              {capabilities.map((cap) => (
-                <li key={cap} className="flex items-center gap-3 text-[0.85rem] text-ink-muted">
-                  <span className="w-1 h-1 rounded-full bg-accent-blue flex-shrink-0" />
-                  {cap}
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Tools */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="p-6 rounded-xl border border-thin bg-bg-card"
-          >
-            <h3 className="font-display font-700 text-[0.95rem] text-ink-primary mb-4">
-              Tool Stack
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {tools.map((tool) => (
-                <span
-                  key={tool}
-                  className="px-3 py-1.5 rounded-lg text-[0.8rem] font-medium
-                             bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.07)]
-                             text-ink-muted"
-                >
-                  {tool}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-        </div>
       </div>
     </section>
   )
