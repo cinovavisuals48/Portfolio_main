@@ -7,54 +7,39 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { links } from '../data/links'
 import Link from 'next/link'
 import Image from 'next/image'
 
 const navLinks = [
   { label: 'Work',     href: '/#projects' },
-  { label: 'Services', href: '/#about'    },
-  { label: 'Pricing',  href: '/#contact'  },
+  { label: 'Services', href: '/#services' },
+  { label: 'About',    href: '/#about'    },
 ]
 
-// Typing animation component
-function TypingText({ text, isTyping }) {
-  const [displayText, setDisplayText] = useState('')
-  const [showCursor, setShowCursor] = useState(true)
+// Typing dots animation component (looping)
+function TypingDots() {
+  const [dotCount, setDotCount] = useState(0)
 
   useEffect(() => {
-    if (!isTyping) {
-      setDisplayText(text)
-      return
-    }
-
-    setDisplayText('')
-    let index = 0
     const interval = setInterval(() => {
-      if (index < text.length) {
-        setDisplayText(text.slice(0, index + 1))
-        index++
-      } else {
-        clearInterval(interval)
-      }
-    }, 80)
-
+      setDotCount(prev => (prev + 1) % 4)
+    }, 400)
     return () => clearInterval(interval)
-  }, [text, isTyping])
-
-  useEffect(() => {
-    const cursorInterval = setInterval(() => {
-      setShowCursor(prev => !prev)
-    }, 530)
-    return () => clearInterval(cursorInterval)
   }, [])
 
   return (
-    <span className="font-display font-semibold text-[0.95rem] tracking-tight text-white">
-      {displayText}
-      {isTyping && (
-        <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}>|</span>
-      )}
+    <span className="flex items-center gap-[3px] ml-2">
+      {[0, 1, 2].map((i) => (
+        <motion.span
+          key={i}
+          className="w-[5px] h-[5px] rounded-full bg-neutral-600"
+          animate={{
+            backgroundColor: i < dotCount ? '#404040' : '#737373',
+            scale: i < dotCount ? 1.1 : 1,
+          }}
+          transition={{ duration: 0.15 }}
+        />
+      ))}
     </span>
   )
 }
@@ -62,18 +47,21 @@ function TypingText({ text, isTyping }) {
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [isTyping, setIsTyping] = useState(false)
-  const prevScrolled = useRef(false)
+  const lastScrollY = useRef(0)
 
   useEffect(() => {
     const onScroll = () => {
-      const isScrolled = window.scrollY > 60
-      if (isScrolled !== prevScrolled.current) {
-        setIsTyping(true)
-        setTimeout(() => setIsTyping(false), 800)
+      const currentScrollY = window.scrollY
+      
+      // Shrink when scrolling down past threshold
+      // Expand when scrolling up even 1 pixel
+      if (currentScrollY > 60 && currentScrollY > lastScrollY.current) {
+        setScrolled(true)
+      } else if (currentScrollY < lastScrollY.current) {
+        setScrolled(false)
       }
-      prevScrolled.current = isScrolled
-      setScrolled(isScrolled)
+      
+      lastScrollY.current = currentScrollY
     }
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
@@ -140,7 +128,11 @@ export default function Navbar() {
                 className="object-cover"
               />
             </motion.div>
-            <TypingText text="Cinova Visuals" isTyping={isTyping} />
+            <span className="font-display font-semibold text-[0.95rem] tracking-tight text-white">
+              Cinova Visuals
+            </span>
+            {/* Typing dots - only show when scrolled/collapsed */}
+            {scrolled && <TypingDots />}
           </Link>
 
           {/* Desktop Links - Hidden when scrolled */}
