@@ -57,12 +57,7 @@ export const projects = [
     id: 'feedbask',
     title: 'Feedbask',
     category: 'Concept Spec',
-    description: 'A spec explainer made for Feedbask
-
-A platform that helps businesses collect and manage customer feedback in one place
-Focused on explaining the product features in a simple and visually clear way through motion design
-Used UI animations and smooth transitions to make the workflow easy to understand
-The goal was to keep the visuals modern engaging and easy to follow while showing how users can collect feedback track ideas and improve products more efficiently',
+    description: 'A spec explainer made for Feedbask A platform that helps businesses collect and manage customer feedback in one place Focused on explaining the product features in a simple and visually clear way through motion designUsed UI animations and smooth transitions to make the workflow easy to understandThe goal was to keep the visuals modern engaging and easy to follow while showing how users can collect feedback track ideas and improve products more efficiently',
     videoEmbedUrl: 'https://player.vimeo.com/video/1191850183',
     thumbnailUrl: '/thumbnails/feedbask.jpg',
     tags: ['Product Explainer', 'SaaS', 'UI Animation'],
