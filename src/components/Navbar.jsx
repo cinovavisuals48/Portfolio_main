@@ -163,20 +163,8 @@ export default function Navbar() {
           <div className="hidden md:flex items-center">
             <AnimatePresence mode="wait">
               {scrolled ? (
-                <motion.button
-                  key="dots"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.2 }}
-                  onClick={() => setScrolled(false)}
-                  className="flex items-center gap-1 p-2 rounded-full hover:bg-white/10 transition-colors"
-                  aria-label="Expand menu"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-neutral-800" />
-                  <span className="w-1.5 h-1.5 rounded-full bg-neutral-800" />
-                  <span className="w-1.5 h-1.5 rounded-full bg-neutral-500" />
-                </motion.button>
+                {/* Empty placeholder when scrolled - dots are next to brand name */}
+                <div className="w-2" />
               ) : (
                 <motion.div
                   key="contact"
