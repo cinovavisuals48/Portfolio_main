@@ -160,7 +160,7 @@ body {
   font-weight: 600;
   font-size: 0.9rem;
   letter-spacing: 0.02em;
-  border-radius: var(--radius-btn);
+  border-radius: 999px;
   transition: all 0.2s ease;
   cursor: pointer;
   border: none;
@@ -188,7 +188,7 @@ body {
   font-weight: 600;
   font-size: 0.9rem;
   letter-spacing: 0.02em;
-  border-radius: var(--radius-btn);
+  border-radius: 999px;
   border: 1px solid var(--border-soft);
   transition: all 0.2s ease;
   cursor: pointer;
