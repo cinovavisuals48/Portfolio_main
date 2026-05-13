@@ -15,23 +15,24 @@ const navLinks = [
   { label: 'Services', href: '/#services' },
 ]
 
-// Typing dots animation component (looping bounce)
+// Typing dots animation component (realistic typing indicator)
 function TypingDots() {
   return (
-    <span className="flex items-center gap-[3px] ml-2">
+    <span className="flex items-center gap-[4px] ml-2">
       {[0, 1, 2].map((i) => (
         <motion.span
           key={i}
-          className="w-[5px] h-[5px] rounded-full bg-white/60"
+          className="w-[5px] h-[5px] rounded-full bg-white/70"
           animate={{
-            y: [0, -4, 0],
+            y: [0, -5, 0],
+            opacity: [0.5, 1, 0.5],
           }}
           transition={{
-            duration: 0.5,
+            duration: 1.2,
             repeat: Infinity,
             repeatType: 'loop',
-            delay: i * 0.15,
-            ease: 'easeInOut',
+            delay: i * 0.2,
+            ease: [0.4, 0, 0.2, 1],
           }}
         />
       ))}
